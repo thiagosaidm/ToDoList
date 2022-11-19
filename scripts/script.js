@@ -7,14 +7,18 @@ const finish = document.querySelector('.finish');///captura do botão finalizar
 const remover = document.querySelector('.remove');///captura do botão cancelar
 
 
+//deixando salvo no localStorage
+const tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+
+
 const salvarTarefa = (text) => {
     
-    ///criando a div com as tarefas com classe tarefas
-    const todo = document.createElement("div");
-    todo.classList.add("tarefas");
-    ///criando elemento h3 com nome da tarefa
-    const nomeTarefa = document.createElement("h3");
-    nomeTarefa.innerText = text;
+    
+    const todo = document.createElement("div");///criando a div com as tarefas com classe tarefas
+    todo.classList.add("tarefas"); // cria-se a classe tarefas
+
+    const nomeTarefa = document.createElement("h3");///criando elemento h3 com nome da tarefa
+    nomeTarefa.innerText += text.nome;
     todo.appendChild(nomeTarefa);
 
     
@@ -41,19 +45,35 @@ const salvarTarefa = (text) => {
     formInput.value = "";
     //volta o foco do usuário na criação de tarefas
     formInput.focus();
+
+
+
 }
 
 
-form.addEventListener("submit", (e) =>{
+/* Ligar o botão de remover tarefa a ação de remover do 
+localStorage */
 
-e.preventDefault()
 
-const todo = formInput.value
+tarefas.forEach(elemento => {
+    salvarTarefa(elemento)
+});
 
-if(todo){
-    salvarTarefa(todo)
-}
+form.addEventListener ("submit", (evento) => {
+    evento.preventDefault()
 
+    const tarefa = evento.target.elements['nome']
+
+    const tarefaAtual = {
+        "nome": formInput.value
+
+    }
+
+    salvarTarefa(tarefaAtual)
+
+    tarefas.push(tarefaAtual)
+
+    localStorage.setItem("tarefas", JSON.stringify(tarefas))
 })
 
 
@@ -70,6 +90,7 @@ document.addEventListener("click", (e) =>{
 
     if (targetEl.classList.contains("remove")) {
         parentEl.remove();
+        
     }
 
 })
