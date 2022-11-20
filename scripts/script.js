@@ -16,9 +16,9 @@ const salvarTarefa = (text) => {
     
     const todo = document.createElement("div");///criando a div com as tarefas com classe tarefas
     todo.classList.add("tarefas"); // cria-se a classe tarefas
-
     const nomeTarefa = document.createElement("h3");///criando elemento h3 com nome da tarefa
     nomeTarefa.innerText += text.nome;
+    nomeTarefa.dataset.id = nomeTarefa.id
     todo.appendChild(nomeTarefa);
 
     
@@ -30,9 +30,10 @@ const salvarTarefa = (text) => {
     ///colocando o botão na div tarefas
     todo.appendChild(finishBtn);
     
-    ///botão cancelar tarefa
+    ///botão remover tarefa
     const removeBtn = document.createElement("button");
     removeBtn.classList.add("remove");
+    removeBtn.dataset.id = text;
     ///criando icone com js
     removeBtn.innerHTML = '<i class="fa-solid fa-ban"></i>';
     ///colocando o botão na div tarefas
@@ -51,10 +52,6 @@ const salvarTarefa = (text) => {
 }
 
 
-/* Ligar o botão de remover tarefa a ação de remover do 
-localStorage */
-
-
 tarefas.forEach(elemento => {
     salvarTarefa(elemento)
 });
@@ -63,10 +60,11 @@ form.addEventListener ("submit", (evento) => {
     evento.preventDefault()
 
     const tarefa = evento.target.elements['nome']
+    
 
     const tarefaAtual = {
-        "nome": formInput.value
-
+        "nome": formInput.value,
+    
     }
 
     salvarTarefa(tarefaAtual)
@@ -77,21 +75,24 @@ form.addEventListener ("submit", (evento) => {
 })
 
 
+
 document.addEventListener("click", (e) =>{
 
     const targetEl = e.target;
     const parentEl = targetEl.closest("div");
 
-    if (targetEl.classList.contains("finish")) {
-        //add class done, para que a tarefa sendo finalizada receba a estilização do css
+    if (targetEl.classList.contains("finish")) { //add class done, para que a tarefa sendo finalizada receba a estilização do css
+       
         parentEl.classList.toggle("done") // toggle -> se tem a classe ele tira ou coloca se não tem
 
     }
 
     if (targetEl.classList.contains("remove")) {
         parentEl.remove();
-        
+        tarefas.splice(tarefas.findIndex,1)
+        localStorage.setItem("tarefas",JSON.stringify(tarefas))
     }
 
 })
+
 
