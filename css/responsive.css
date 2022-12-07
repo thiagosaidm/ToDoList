@@ -1,0 +1,87 @@
+@media (max-width: 768px){
+    .listaTodo{
+        margin: 5vh auto;
+        width: 50%;
+        height: auto;
+        white-space:nowrap;
+    }
+
+    #header > h1{
+        display: flex;
+        justify-content: center;
+        width: 85%;
+        margin:auto auto 1.5em auto;
+        font-size: 2.5em;
+    }
+}
+@media (max-width: 600px){
+    #form{
+        width: 50vw;
+        margin-left: -20px;
+    }
+    
+    #form > h2{
+        font-size: 1.5em;
+        width: 50%;
+        white-space:nowrap;
+    }
+    .controle-tarefa{
+        width: 10vw;
+    }
+    #tarefa{
+        flex: 1;
+        font-size: 0.9rem;
+    }
+
+    .tarefas{
+       width: 80vw;
+       margin-left: -70px;
+       margin-bottom: 1rem;
+
+    }
+}
+@media (max-width: 375px){
+    .tarefas{
+        width: 80vw;
+        margin-left: -60px;
+        margin-bottom: 1rem;
+ 
+     }
+}
+@media (max-width: 325px){
+    .listaTodo{
+        margin: 5vh auto;
+        width: 30%;
+        height: auto;
+        white-space:nowrap;
+    }
+    #header > h1{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin:auto auto 1.5em auto;
+        font-size: 1.5em;
+    }
+    #form > h2{
+        font-size: 1.2em;
+        width: 50%;
+        white-space:nowrap;
+        margin-left: -25px;
+    }
+    .controle-tarefa{
+        width: 10vw;
+        margin-left: -30px;
+    }
+    #tarefa{
+        flex: 1;
+        font-size: 0.7rem;
+    }
+
+    .tarefas{
+       width: 70vw;
+       margin-left: -70px;
+       margin-bottom: 1rem;
+
+    }
+
+}
