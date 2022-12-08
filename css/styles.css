@@ -6,14 +6,14 @@
     
 }
 
-
-
 body{
-    font-family: 'Inter', sans-serif;
-    background-color: #B0E0E6;
-    background-size: cover;
-    height: 1000px;
-    overflow-y: hidden;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(./imgs/bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    height: 1000;
+    overflow-y:auto;
 }
 
 #header{
@@ -21,7 +21,7 @@ body{
     padding: 0;
     margin-top: 0;
     text-align: center;
-    color:#708090;
+    color:#fcfbfb;
     text-shadow: 0px 2px 2px rgb(46, 69, 77);
     
 
@@ -29,13 +29,14 @@ body{
 
 .listaTodo{
     max-width: 50vw;
-    margin: 30vh auto;
+    height: auto;
+    margin: 10vh auto;
     padding: 10vh;
-    border: 1px solid rgb(33, 33, 33);
-    border-radius: 15px;
-    background-color:#ADD8E6;
+    border-radius: 5px;
+    background-color:#b4caf173;
     align-items: center;
     box-sizing: content-box;
+    box-shadow: 5px 5px 15px rgba(81, 81, 81, 0.341);
 
 
 }
@@ -53,7 +54,7 @@ body{
 #form > h2{
     padding-bottom: 1rem;
     font-weight: bold;
-    color: rgba(241, 241, 241, 0.976);
+    color: #fffcfcf9;
     text-shadow: 0px 2px 2px rgb(46, 69, 77);
     
 
@@ -73,11 +74,11 @@ body{
     align-items: center;
     justify-content: space-around;
     border-radius: 10px;
-    background-color: rgba(78, 108, 172, 0.509);
+    background-color: rgba(221, 222, 225, 0.796);
     padding: 1rem;
     margin-bottom: 1rem;
     width: auto;
-    color: rgb(228, 231, 233);
+    color: rgb(54, 54, 54)
 }
 
 .tarefas h3{
@@ -95,9 +96,9 @@ body{
 }
 
 button{
-    background-color:rgb(16, 170, 208);
+    background-color:rgb(53, 147, 240);
     color: aliceblue;
-    border: 1px solid rgba(47, 200, 239, 0.472);
+    border: 1px solid rgba(73, 127, 227, 0.305);
     border-radius: 20%;
     padding: .3rem .6rem;
     font-size: 1rem;
@@ -110,8 +111,8 @@ button{
 }
 
 button:hover{
-    background-color:rgb(21, 203, 248);
-    box-shadow: 1px 1px 8px rgb(0, 195, 255);
+    background-color:rgb(92, 156, 240);
+    box-shadow: 1px 1px 8px rgb(120, 176, 255);
     transition: .2s;
 }
 
@@ -125,30 +126,28 @@ button i {
 
 input {
     padding: .2rem .5rem;
-    background-color:rgba(213, 205, 205, 0.672);
-    border-bottom: 2px solid rgb(16, 170, 208);
+    background-color:rgba(254, 254, 254, 0.672);
+    border-bottom: 2px solid rgb(80, 167, 239);
     border-top: none;
     border-left: none;
     border-right: none;
     box-shadow: 0;
     outline: 0;
-    color: aliceblue;
+    color: rgb(99, 100, 100);
     
     
 }
 
 input:hover{
-    border: 2px solid rgb(21, 203, 248);
-    box-shadow:rgb(21, 203, 248) 1px 1px 12px 2px inset
-               rgb(21, 203, 248) 1px 1px 12px 2px;
-    border-radius: 15px;
+    border: 2px solid rgb(59, 144, 241);
+    border-radius: 1px;
     transition: 0.4s;
 }
 
 
 
 .done{
-    background-color: rgb(28, 28, 28);
+    background-color: rgba(30, 107, 149, 0.408);
     box-shadow: none;
     
 

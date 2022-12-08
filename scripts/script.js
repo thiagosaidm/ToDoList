@@ -13,14 +13,13 @@ const tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
 
 const salvarTarefa = (text) => {
     
-    
     const todo = document.createElement("div");///criando a div com as tarefas com classe tarefas
     todo.classList.add("tarefas"); // cria-se a classe tarefas
     const nomeTarefa = document.createElement("h3");///criando elemento h3 com nome da tarefa
     nomeTarefa.innerText += text.nome;
     nomeTarefa.dataset.id = nomeTarefa.id
     todo.appendChild(nomeTarefa);
-
+    
     
     ///criando botão finalizar tarefa com js
     const finishBtn = document.createElement("button");
@@ -66,6 +65,7 @@ form.addEventListener ("submit", (evento) => {
         "nome": formInput.value,
     
     }
+
 
     salvarTarefa(tarefaAtual)
 

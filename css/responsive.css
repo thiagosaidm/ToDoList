@@ -48,10 +48,10 @@
  
      }
 }
-@media (max-width: 325px){
+@media (max-width: 320px){
     .listaTodo{
         margin: 5vh auto;
-        width: 30%;
+        width: 50%;
         height: auto;
         white-space:nowrap;
     }
@@ -66,7 +66,7 @@
         font-size: 1.2em;
         width: 50%;
         white-space:nowrap;
-        margin-left: -25px;
+        margin: 0;
     }
     .controle-tarefa{
         width: 10vw;
@@ -75,13 +75,20 @@
     #tarefa{
         flex: 1;
         font-size: 0.7rem;
+        margin-left: 3em;
     }
 
     .tarefas{
        width: 70vw;
-       margin-left: -70px;
-       margin-bottom: 1rem;
+       margin:auto auto 5px -35px;    
+    }
+    .tarefas > h3 {
+        font-size: calc(40% + .25em)
+    }
 
+    .tarefas > button{
+        width: 1em;
+        height: 1.5em;
     }
 
 }
