@@ -80,7 +80,7 @@
 
     .tarefas{
        width: 70vw;
-       margin:auto auto 5px -35px;    
+       margin:auto auto 5px -25px;    
     }
     .tarefas > h3 {
         font-size: calc(40% + .25em)

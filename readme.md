@@ -2,7 +2,7 @@
 > Status: Em Desenvolvimento 👨‍💻
 
 
-## To do simples desenvolvido com o intuito de praticar Eventos e manipulação de Dom, bem como CSS
+## To do simples desenvolvido com o intuito de praticar Eventos e manipulação de Dom, bem como CSS.
 
 
 ### Tecnologias
@@ -16,6 +16,7 @@
 * Adicionar Tarefas
 * Concluir Tarefas
 * Remover Tarefas
+* Armazena tarefas ao atualizar página
 
 
 
