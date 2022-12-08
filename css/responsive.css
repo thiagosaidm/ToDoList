@@ -92,3 +92,10 @@
     }
 
 }
+
+@media (max-width: 270px){
+    .tarefas{
+        width: 70vw;
+        margin:auto auto 5px -25px;    
+     }
+}
